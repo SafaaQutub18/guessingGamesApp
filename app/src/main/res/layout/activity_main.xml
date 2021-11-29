@@ -34,13 +34,13 @@
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/numGameBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="NUMBER GAME" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/phraseGameBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="GUESS THE PHRASE" />

@@ -6,18 +6,34 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import android.widget.Button
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
     lateinit var myLayout : ConstraintLayout //used for snackbar
 
+    lateinit var numGameBt: Button
+    lateinit var phaseGameBt: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         title = "Main Activity"
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        numGameBt = findViewById(R.id.numGameBtn)
+        phaseGameBt = findViewById(R.id.phraseGameBtn)
+
         myLayout = findViewById(R.id.mainActivityLayout)
+
+
+        numGameBt.setOnClickListener {
+            val intent = Intent(this, NumberGameActivity ::class.java)
+            startActivity(intent)
+        }
+        phaseGameBt.setOnClickListener {
+            val intent = Intent(this, PhraseGameActivity ::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
